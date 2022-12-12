@@ -1,0 +1,94 @@
+.formSvg {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: .7rem;
+    margin-bottom: .7rem;
+}
+#registerForm , #loginForm{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  #registerForm .userInfo , #loginForm .userInfo{
+    display: block;
+    background-color: #F5F5F5;
+    border: none;
+    border-radius: 8px;
+    padding: .5rem;
+    width: 300px;
+    height: 40px;
+    margin-top: 1rem;
+  }
+
+  #registerForm #agreeBox {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;  
+    margin-right: .6rem;
+    margin-left: .6rem;
+    position: relative;
+    top:2px;
+  }
+
+  #confirmText {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: small;
+  }
+
+  #terms:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .submitButton {
+    border: none;
+    border-radius: 8px;
+    padding: .5rem 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffff;
+    background-color: #5856D7;
+  }
+
+  .submitButton:hover {
+    opacity: .8;
+    cursor: pointer;
+  }
+
+  p {
+    margin-top: 2rem;
+    font-size: small;
+    text-align: center;
+  }
+
+  p span {
+    color: #4b49ae;
+  }
+
+  p span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  #loginFormTitle {
+    word-spacing: 4px;
+    letter-spacing: 4px;
+  }
+
+  #registerFormTitle , #loginFormTitle {
+    text-align: center;
+  }
