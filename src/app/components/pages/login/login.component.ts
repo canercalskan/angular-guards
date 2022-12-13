@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { UserModel } from "src/app/models.ts/user.model";
 import { Router } from "@angular/router";
+import { UserService } from "src/app/services/user.service";
 @Component({
     selector : 'login',
     templateUrl : './login.component.html',
@@ -9,7 +10,8 @@ import { Router } from "@angular/router";
 
 export class LoginComponent {
     showRegisterForm : boolean = true;
-    constructor(private router : Router){}
+    authenticated!: boolean
+    constructor(private router : Router , private Userservice : UserService){}
     activateLoginForm() : void {
         this.showRegisterForm = false;
     }
@@ -23,6 +25,11 @@ export class LoginComponent {
         this.router.navigate(['Home'])
     }
 
-    handleLoginFormSubmission(data : UserModel) : void {}
+    handleLoginFormSubmission(data : UserModel) : void {
+        this.authenticated = this.Userservice.authenticateUser(data);
+        if(this.authenticated) {
+            this.router.navigate(['Home']);
+        } 
+    }
 
 }

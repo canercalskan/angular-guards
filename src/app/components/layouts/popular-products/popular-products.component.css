@@ -1,0 +1,56 @@
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    overflow: scroll;
+    margin-top: 1rem;
+}
+
+ul::-webkit-scrollbar {
+    display: none;
+}
+
+ul li {
+    height: 150px;
+    list-style-type: none;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-radius: 10px; 
+    box-shadow: -1px 7px 3px 0px rgba(186,186,186,1);
+    padding: 1rem;
+    transition: all .6s;
+}
+
+ul li:hover {
+    cursor: pointer;
+    box-shadow: -1px 7px 3px 0px rgb(153, 153, 153);
+}
+
+ul li img {
+    width: 200px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -30px;
+}
+
+ svg {
+    float: right;
+    background-color: #5856D7;
+    border-radius: 100px;
+    padding: 3px;
+    color: green;
+    width: 30px;
+    height: 30px;
+}
+
+ul li span p {
+    display: inline;
+    text-transform: capitalize;
+}
+

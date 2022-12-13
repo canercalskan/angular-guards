@@ -1,0 +1,44 @@
+.wrapper {
+    align-items: center;
+    max-width: 100vw;
+    margin-left: 15rem;
+    margin-top: 2rem;
+}
+
+img {
+    width: 500px;
+}
+
+.categories img {
+    width: auto;
+    margin: .5rem;
+    padding: 0px;
+}
+
+/* since the categories is static and there will be no pages for them, i just got them as a whole image from figma */
+.categories img:hover {
+    cursor: pointer;
+}
+
+.container {
+    margin-top: .7rem;
+    display: grid; 
+    overflow: scroll;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 5em 3em; 
+    /* gap : 0 0; */
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+  
+.column {
+    flex: 50%;
+}
+
+.salute {
+    position: relative;
+    left: 5px;
+}

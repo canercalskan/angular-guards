@@ -6,7 +6,6 @@
     <circle cx="99" cy="-11" r="100" fill="#5856D6" fill-opacity="0.16"/>
 </svg>
 
-<!-- <register-form *ngIf="!showRegisterForm"></register-form> -->
 <form *ngIf="showRegisterForm" id="registerForm" #registerForm = 'ngForm' ngNativeValidate (submit) = 'handleRegisterFormSubmission(registerForm.value); registerForm.reset()'>
     <h1 id="registerFormTitle">Create Account</h1>
     <svg class="formSvg" width="200" height="178" viewBox="0 0 200 178" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,6 +105,7 @@
     </svg>
     <input class="userInfo" type="email" name="email"  placeholder="Email" required ngModel>
     <input class="userInfo" type="password" name="password" placeholder="Password" required ngModel>
+    <p *ngIf="authenticated === false" style="color: red;">Invalid login attempt</p>
     <div class="flex">
         <button type="submit" class="submitButton">
             Sign In
@@ -114,7 +114,6 @@
     <p><span (click) = 'activateRegisterForm()'>Sign Up </span>to use our website</p>
 </form>
 
-<!-- <login-form *ngIf="showLoginForm"></login-form> -->
 
 
     

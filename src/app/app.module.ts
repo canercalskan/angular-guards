@@ -8,20 +8,25 @@ import { LoginComponent } from './components/pages/login/login.component';
 import { RouteGuard } from './guards/route.guard';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
+import { AuthService } from './services/auth.service';
+import { UserService } from './services/user.service';
+import { RecentlyVisitedProducts } from './components/layouts/recently-visited/recently-visited.component';
+import { PopularProducts } from './components/layouts/popular-products/popular-products.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NotFound , 
-    LoginComponent
+    LoginComponent,
+    RecentlyVisitedProducts,
+    PopularProducts
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    RouteGuard
+    RouteGuard , AuthService , UserService
   ],
   providers: [],
   bootstrap: [AppComponent]

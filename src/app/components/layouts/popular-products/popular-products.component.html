@@ -1,0 +1,28 @@
+<h2>Popular Products</h2>
+<!-- USE ARROW KEYS TO SCROLL THROUGH LIST, I SET OVERFLOW BEHAVIOUR TO SCROLL. -->
+<div>
+    <ul>
+        <li *ngFor="let item of popularProductsList.results">
+            <img src="../../../../assets/poke.png" alt="">
+            <span>
+                <p>{{item.name}}</p>
+                <span style="display: inline;">
+                    <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_202_1880)">
+                        <path d="M18.3437 14.5093L20.9259 6.76246L20.0419 6.46762L17.672 13.5777H9.02812L5.76768 3.79639H3.10297V4.72794H5.09603L8.19345 14.0193L6.11235 18.7013H18.9394V17.7697H7.54602L8.99505 14.5093H18.3437Z" fill="white"/>
+                        <path d="M10.0896 21.0301C10.6041 21.0301 11.0212 20.613 11.0212 20.0985C11.0212 19.5841 10.6041 19.167 10.0896 19.167C9.57515 19.167 9.15808 19.5841 9.15808 20.0985C9.15808 20.613 9.57515 21.0301 10.0896 21.0301Z" fill="#FEFEFE"/>
+                        <path d="M15.6789 21.0301C16.1934 21.0301 16.6105 20.613 16.6105 20.0985C16.6105 19.5841 16.1934 19.167 15.6789 19.167C15.1644 19.167 14.7474 19.5841 14.7474 20.0985C14.7474 20.613 15.1644 21.0301 15.6789 21.0301Z" fill="#FEFEFE"/>
+                        <path d="M12.8843 2.86475V5.65941H10.0897V6.59096H12.8843V9.38563H13.8159V6.59096H16.6105V5.65941H13.8159V2.86475H12.8843Z" fill="#FEFEFE"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_202_1880">
+                        <rect width="22.3573" height="22.3573" fill="white" transform="translate(0.774048 0.536011)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                    <span style="float: right; margin-right: 3px;">10$</span>
+                </span>
+            </span>
+        </li>
+    </ul>
+</div>
