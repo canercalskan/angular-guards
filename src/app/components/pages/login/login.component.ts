@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { UserModel } from "src/app/models.ts/user.model";
+import { UserModel } from "src/app/models/user.model";
 import { Router } from "@angular/router";
 import { UserService } from "src/app/services/user.service";
 @Component({

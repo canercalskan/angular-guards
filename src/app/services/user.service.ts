@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
-import { PokemonModel } from "../models.ts/pokemon.model";
-import { UserModel } from "../models.ts/user.model";
+import { ExpectedReturnModel, PokemonModel } from "../models/pokemon.model";
+import { UserModel } from "../models/user.model";
 import { HttpClient } from "@angular/common/http";
 import { lastValueFrom } from "rxjs";
 
@@ -23,9 +23,11 @@ export class UserService {
     }
 
     async getPokemons(){
-        let pokemons : PokemonModel;
-        const pokemons$ = this.http.get<PokemonModel>('https://pokeapi.co/api/v2/pokemon?limit=10&offset=0')
-        pokemons = await lastValueFrom(pokemons$)
+        let returnVal : ExpectedReturnModel;
+        let pokemons : PokemonModel[];
+        const returnVal$ = this.http.get<ExpectedReturnModel>('https://pokeapi.co/api/v2/pokemon?limit=10&offset=0')
+        returnVal = await lastValueFrom(returnVal$)
+        pokemons = returnVal.results
         return pokemons;
     }
 }

@@ -1,8 +1,9 @@
-<h2>Popular Products</h2>
-<!-- USE ARROW KEYS TO SCROLL THROUGH LIST, I SET OVERFLOW BEHAVIOUR TO SCROLL. -->
+<div class="wrapper">
+    <h2>Popular Products</h2>
+<!-- USE ARROW KEYS OR TOUCHPAD TO SCROLL THROUGH LIST, I SET OVERFLOW BEHAVIOUR TO SCROLL. -->
 <div>
     <ul>
-        <li *ngFor="let item of popularProductsList.results">
+        <li *ngFor="let item of popularProductsList" (click) = 'visitProduct(item)'>
             <img src="../../../../assets/poke.png" alt="">
             <span>
                 <p>{{item.name}}</p>
@@ -20,9 +21,10 @@
                         </clipPath>
                         </defs>
                     </svg>
-                    <span style="float: right; margin-right: 3px;">10$</span>
+                    <span style="float: right; margin-right: 3px;">{{item.price}}$</span>
                 </span>
             </span>
         </li>
     </ul>
+</div>
 </div>

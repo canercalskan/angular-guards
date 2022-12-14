@@ -12,6 +12,8 @@ import { AuthService } from './services/auth.service';
 import { UserService } from './services/user.service';
 import { RecentlyVisitedProducts } from './components/layouts/recently-visited/recently-visited.component';
 import { PopularProducts } from './components/layouts/popular-products/popular-products.component';
+import { OrderComponent } from './components/pages/order/order.component';
+import { LogGuard } from './guards/login.guard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,14 +21,15 @@ import { PopularProducts } from './components/layouts/popular-products/popular-p
     NotFound , 
     LoginComponent,
     RecentlyVisitedProducts,
-    PopularProducts
+    PopularProducts , 
+    OrderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    RouteGuard , AuthService , UserService
+    RouteGuard , AuthService , UserService , LogGuard
   ],
   providers: [],
   bootstrap: [AppComponent]
